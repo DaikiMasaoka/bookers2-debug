@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     get 'followings' => 'relationships#followings', as: 'followings'
     get 'followers' => 'relationships#followers', as: 'followers'
   end
-  resources :relationships, only: [:create, :destroy]
   resources :books do
     resource :favorites, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]

@@ -2,10 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
-  $("#user_postcode").jpostal({
+  $("#address_zipcode").jpostal({
     # 郵便番号の入力欄が１つの場合
     # 111-1111と1111111のどちらの入力形式でも住所を自動入力してくれる
-    postcode : [ "#user_postcode" ],
+    postcode : [ "#address_zipcode" ],
 
     # 郵便番号の入力欄が3桁-4桁で分かれている場合
     # postcode : [ '#zipcode1', '#zipcode2' ]

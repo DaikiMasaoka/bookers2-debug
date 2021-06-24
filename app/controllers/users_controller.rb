@@ -24,14 +24,13 @@ class UsersController < ApplicationController
     end
   end
 
-  def zipedit
-    params.require(:user).permit(:postcode, :prefecture_name, :address_city, :address_street, :address_building)
-  end
-
-
   private
   def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
+  end
+
+  def zipedit
+    params.require(:user).permit(:postcode, :prefecture_name, :address_city, :address_street, :address_building)
   end
 
   def ensure_correct_user

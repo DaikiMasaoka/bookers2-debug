@@ -29,10 +29,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :introduction, :profile_image)
   end
 
-  def zipedit
-    params.require(:user).permit(:postcode, :prefecture_name, :address_city, :address_street, :address_building)
-  end
-
   def ensure_correct_user
     @user = User.find(params[:id])
     unless @user == current_user
